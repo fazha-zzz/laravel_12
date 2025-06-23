@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
 use App\Http\Controllers\BackendController;
+use App\Http\Controllers\Beckend\ProductController;
+use App\Http\Controllers\Beckend\CategoryController;
 use App\Http\Middleware\admin;
 use Illuminate\Support\Facades\Auth;
 
@@ -78,4 +80,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // route untuk admin/backend
 Route::group(['prefix'=>'admin', 'middleware'=> ['auth',admin::class]], function () {
     Route::get('/', [BackendController::class,'index']);
+
+    Route::resource('/category', CategoryController::class);
+    Route::resource('/product', ProductController::class);
 });
+
+
