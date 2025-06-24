@@ -22,8 +22,8 @@
                             @enderror
                         </div>
                         <div class="mb-2">
-                            <button class="btn btn-sm btn-outline-primary">simpan</button>
-                            <button class="btn btn-sm btn-outline-warning">reset</button>
+                            <button type="submit" class="btn btn-sm btn-outline-primary">simpan</button>
+                            <button type="reset" class="btn btn-sm btn-outline-warning">reset</button>
                         </div>
                     </form>
                 </div>

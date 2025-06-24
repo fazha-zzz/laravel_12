@@ -8,12 +8,12 @@ class Product extends Model
 {
     //field apa aja yaang wajib di isi
 
-    public $fillable=['category_id','name','slug','description','image','price','stok'];
+    public $fillable=['category_id','name','slug','description','image','price','stock'];
 
     
      public function category()
     {
-        return $this->belogsTo(Category::class);
+        return $this->belongsTo(Category::class);
 
     }
 
@@ -24,6 +24,6 @@ class Product extends Model
 
      public function orders()
     {
-        return $this->belongToMany(order::class)->withPivot('qyt', 'price')->withTimestamps();
+        return $this->belongsToMany(order::class)->withPivot('qyt', 'price')->withTimestamps();
     }
 }
