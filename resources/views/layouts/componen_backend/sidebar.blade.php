@@ -25,19 +25,35 @@
             <!-- Dashboard -->
             <!-- ---------------------------------- -->
             <li class="sidebar-item">
-              <a class="sidebar-link" href="" id="get-url" aria-expanded="false">
+              <a class="sidebar-link" href="{{ url('/admin')}}" id="get-url" aria-expanded="false">
                 <span>
                   <i class="ti ti-aperture"></i>
                 </span>
-                <span class="hide-menu">Modern</span>
+                <span class="hide-menu">Dashboard</span>
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./main/index2.html" aria-expanded="false">
+              <a class="sidebar-link" href="{{ route('backend.category.index')}}" aria-expanded="false">
+                <span>
+                  <i class="ti ti-aperture"></i>
+                </span>
+                <span class="hide-menu">Category</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="{{ route('backend.product.index')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-shopping-cart"></i>
                 </span>
-                <span class="hide-menu">eCommerce</span>
+                <span class="hide-menu">product</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="{{ route('backend.orders.index')}}" aria-expanded="false">
+                <span>
+                  <i class="ti ti-shopping-cart"></i>
+                </span>
+                <span class="hide-menu">order</span>
               </a>
             </li>
             

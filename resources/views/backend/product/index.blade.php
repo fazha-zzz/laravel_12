@@ -12,7 +12,7 @@
         
         <div class="card-header bg-secondary">
             data product
-            <a href="{{ route('product.create')}}" class="btn btn-info btn-sm"
+            <a href="{{ route('backend.product.create')}}" class="btn btn-info btn-sm"
                 style="color:white; floot: right; ">
                 Tambah
             </a>
@@ -39,13 +39,13 @@
                             <td>{{$data->price}}</td>
                             <td>{{$data->stock}}</td>
                             <td>
-                                <a href="{{ route('product.show',$data->id) }}" class="btn btn-sm btn-warning">
+                                <a href="{{ route('backend.product.show',$data->id) }}" class="btn btn-sm btn-warning">
                                     Show
                                 </a> |
-                                <a href="{{ route('product.edit',$data->id) }}" class="btn btn-sm btn-warning">
+                                <a href="{{ route('backend.product.edit',$data->id) }}" class="btn btn-sm btn-warning">
                                     Edit
                                 </a> |
-                                <a href="{{ route('product.destroy',$data->id) }}" class="btn btn-sm btn-danger" data-confirm-delete="true">
+                                <a href="{{ route('backend.product.destroy',$data->id) }}" class="btn btn-sm btn-danger" data-confirm-delete="true">
                                     delete
                                 </a>|
                             </td>

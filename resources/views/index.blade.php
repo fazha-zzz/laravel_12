@@ -79,36 +79,9 @@
          <!-- herobanner__end -->
 
          <!-- banner__section__start -->
-            <div class="banner sp_top_80 sp_bottom_80">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-12">
-                            <div class="banner__img">
-                                <img src="{{asset('assets/frontend/img/banner/banner__1.png')}}" alt="">
-                                <div class="banner__info">
-                                    <h2><a href="shop.html">Suits & Formalwear</a></h2>
-                                    <div class="banner__button">
-                                        <a class="default__button btn__black" href="shop.html">Shop Now</a>
-                                   </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-12">
-                            <div class="banner__img">
-                                <img src="{{asset('assets/frontend/img/banner/banner__2.png')}}" alt="">
-                                <div class="banner__info">
-                                    <h2><a href="shop.html">Tops & Gowns</a></h2>
-                                    <div class="banner__button">
-                                        <a class="default__button btn__black" href="shop.html">Shop Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
           <!-- banner__section__end -->
-
+<br>
           <!-- best__selling__start -->
            <div class="best__selling sp_bottom_80">
                 <div class="container">

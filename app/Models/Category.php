@@ -13,4 +13,10 @@ class Category extends Model
     {
         return $this->hasMany(Product::class);
     }
+
+    //mengantikan kunci id menjadi slug
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

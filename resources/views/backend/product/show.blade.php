@@ -75,7 +75,7 @@
                         
 
                         <div class="mb-4">
-                           <a href="{{ route('product.index')}}" class="btn btn-smbtn-secondart">
+                           <a href="{{ route('backend.product.index')}}" class="btn btn-smbtn-secondart">
                             <i class="fas fa-arrow-left"></i> Kembali
                            </a>
                         </div>

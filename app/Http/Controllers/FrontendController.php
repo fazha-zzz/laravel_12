@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Category;
 
 class FrontendController extends Controller
 {
@@ -18,12 +19,39 @@ class FrontendController extends Controller
     }
 
     public function product(){
+        $category = Category::all();
         $product = Product::latest()->get();
-        return view('product');
+        return view('product', compact('product', 'category'));
     }
 
-    public function cart(){
-        return view('cart');
+    public function singleProduct(Product $product){
+        return view('single_product', compact('product'));
+    }
+
+    public function filterByCategory($slug){
+        $category = Category::all();
+        $selectedCategory = Category::where('slug', $slug)->firstOrFail();
+        $product = Product::where('category_id', $selectedCategory->id)->latest()->get();
+
+        return view('product', compact('product', 'category', 'selectedCategory'));
+    }
+
+    public function search()
+    {
+        $query = require('q');
+
+        $product = Product::where('name', 'like', '%' . $query . '%')
+        ->orWhere('description','like', '%' . $query . '%')
+        ->orWhere('category', function ($q) use ($query) {
+            $q->where('name','like', '%' . $query . '%');
+        })
+        ->latest()
+        ->get();
+
+        $category = Category::all();//untuk siderbar/filter kategory jika dibutuhkan
+
+        return view('product', compact('product', 'category', 'query'));
+    
     }
     
 }

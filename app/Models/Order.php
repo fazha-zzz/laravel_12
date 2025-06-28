@@ -10,11 +10,11 @@ class Order extends Model
 
      public function user()
     {
-        return $this->belongTo(User::class);
+        return $this->belongsTo(User::class);
     }
 
-     public function products()
+     public function product()
     {
-        return $this->belongToMany(Product::class)->withPivot('qyt', 'price')->withTimestamps();
+        return $this->belongsToMany(Product::class)->withPivot('qty', 'price')->withTimestamps();
     }
 }
